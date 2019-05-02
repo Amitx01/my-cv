@@ -40,7 +40,6 @@
     <script type="text/javascript">
 
       function toRad(value) {
-        alert ("Value", value)
         return value * Math.PI / 180;
       }
 
@@ -50,7 +49,6 @@
         const brng= toRad(document.getElementById("user_input_bearing_angle").value);
         const lat= document.getElementById("user_input_latitude").value;
         const longt= document.getElementById("user_input_longitude").value;
-        alert("Code to make AJAX Call");
 	      const lat1 = toRad(lat);
 	      const lon1 = toRad(longt);
         console.log(lat, longt);
@@ -76,8 +74,8 @@
         <form id="my-form" class="" onsubmit="return findLatLong()" method="post">
           <input placeholder="Distance in KM" id="user_input_distnace" type="number" name="Distance in KM" min="0" required>
           <input placeholder="Bearing Angle (In degree)" id="user_input_bearing_angle" type="number" name="Bearing angle" min="0" max="360" maxlength="3" required>
-          <input placeholder="Latitude" id="user_input_latitude" type="number" name="Latitude" required>
-          <input placeholder="Longitude" id="user_input_longitude" type="number" name="Longitude" required>
+          <input placeholder="Latitude" id="user_input_latitude" name="Latitude" required>
+          <input placeholder="Longitude" id="user_input_longitude" name="Longitude" required>
           <button class="button" type="submit" name="button">submit</button>
           <button class="button" type="reset" name="button">Clear</button>
         </form>
