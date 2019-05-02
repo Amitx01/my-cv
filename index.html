@@ -16,13 +16,18 @@
       }
       #my-form input {
         font-size: 30px;
-        color:
+        display: block;
         height: 40px;
         margin: 20px auto;
         width: 45%;
       }
-      input {
-        display: block;
+      input::placeholder {
+        font-size: 20px;
+        text-align: center;
+      }
+      button {
+        font-size: 15px;
+        padding: 10px;
       }
       input:focus,
       .button:hover {
@@ -69,17 +74,17 @@
     <div class="main-wrapper">
       <div class="input-container">
         <form id="my-form" class="" onsubmit="return findLatLong()" method="post">
-          <input id="user_input_distnace" type="number" name="Distance in KM" min="0" required>
-          <input id="user_input_bearing_angle" type="number" name="Bearing angle" min="0" max="360" maxlength="3" required>
-          <input id="user_input_latitude" type="number" name="Latitude" required>
-          <input id="user_input_longitude" type="number" name="Longitude" required>
+          <input placeholder="Distance in KM" id="user_input_distnace" type="number" name="Distance in KM" min="0" required>
+          <input placeholder="Bearing Angle (In degree)" id="user_input_bearing_angle" type="number" name="Bearing angle" min="0" max="360" maxlength="3" required>
+          <input placeholder="Latitude" id="user_input_latitude" type="number" name="Latitude" required>
+          <input placeholder="Longitude" id="user_input_longitude" type="number" name="Longitude" required>
           <button class="button" type="submit" name="button">submit</button>
           <button class="button" type="reset" name="button">Clear</button>
         </form>
         <div class="lat-long-container">
           <p>Calculated Latitude is <span id="new-lat"></span></p>
           <p>Calculated Longitude is <span id="new-long"></span></p>
-          <p>Total coordinate is <span id="new-coord"></span></p>
+          <p>The coordinate is <span id="new-coord"></span></p>
         </div>
       </div>
     </div>
